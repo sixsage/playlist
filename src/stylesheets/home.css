@@ -1,4 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@font-face {
+  font-family: "Source-Sans-Pro";
+  src: url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+}
+
 html,
 body {
   padding: 0;
@@ -41,7 +45,7 @@ body {
 }
 
 .title-container .title {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source-Sans-Pro", sans-serif;
   font-size: 3.5em;
   color: #dfe6f5;
   font-weight: 900;
@@ -64,7 +68,7 @@ body {
 }
 
 .link-input-container .link-input {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source-Sans-Pro", sans-serif;
   height: 50%;
   width: 45%;
   font-size: 1.25em;

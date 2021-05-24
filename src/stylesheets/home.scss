@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@font-face {
+    font-family: "Source-Sans-Pro";
+    src: url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+}
 
 $background: #0e1122;
 $dark-bg: #161a2b;
@@ -6,7 +9,7 @@ $dark-bg: #161a2b;
 $default-text: #dfe6f5;
 
 @mixin source-sans() {
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Source-Sans-Pro", sans-serif;
 }
 
 @mixin flex($justify, $align) {
