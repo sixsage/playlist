@@ -1,8 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 html,
 body {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body {
+  background: #0e1122;
+  font-size: 16px;
+}
+
+.main-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main-content .title-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100px;
+          flex: 0 1 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title-container .title {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 3.5em;
+  color: #dfe6f5;
+  font-weight: 900;
+}
+
+.main-content .link-input-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100px;
+          flex: 0 1 100px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.link-input-container .link-input {
+  font-family: "Source Sans Pro", sans-serif;
+  height: 50%;
+  width: 45%;
+  font-size: 1.25em;
+  border: 1px solid #dfe6f5;
+  background: #161a2b;
+  border-radius: 8px;
+  color: #dfe6f5;
+  outline: none;
+}
+
+.link-input-container .link-input::-webkit-input-placeholder {
+  color: #dfe6f5;
+}
+
+.link-input-container .link-input:-ms-input-placeholder {
+  color: #dfe6f5;
+}
+
+.link-input-container .link-input::-ms-input-placeholder {
+  color: #dfe6f5;
+}
+
+.link-input-container .link-input::placeholder {
+  color: #dfe6f5;
+}
+
+.main-content .player-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.player-container .video-container {
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.video-container .aspect-ratio-container {
+  width: 80%;
+  height: 93%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aspect-ratio-container .aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  background: #161a2b;
+}
+
+.aspect-ratio .video {
+  width: 100%;
+  height: 100%;
+}
+
+.player-container .queue-container {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.queue-container .queue {
+  width: 80%;
+  height: 93%;
+  background: #161a2b;
+  border: 1px solid #dfe6f5;
+  border-radius: 8px;
 }
 /*# sourceMappingURL=home.css.map */

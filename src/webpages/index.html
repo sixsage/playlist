@@ -4,10 +4,34 @@
     <meta charset = "UTF-8" />
     <meta http-equiv = "X-UA-Compatible" content = "IE=edge" />
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
-    <title>playlist</title>
+    <title>Q</title>
     <link rel = "stylesheet" href = "../stylesheets/home.css" />
 </head>
 <body>
+    <div class="main-content">
+        <div class="title-container">
+            <span id="title" class="title">Q</span>
+        </div>
+
+        <div class="link-input-container">
+            <input id="link-input" class="link-input" placeholder="Paste Youtube link here!" />
+        </div>
+
+        <div class="player-container">
+            <div class="video-container">
+                <div class="aspect-ratio-container">
+                    <div class="aspect-ratio">
+                        <div id="video" class="video"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="queue-container">
+                <div id="queue" class="queue"></div>
+            </div>
+        </div>
+    </div>
+
     <script src = "../scripts/home.js"></script>
 </body>
 </html>
