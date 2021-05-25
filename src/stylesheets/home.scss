@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Source-Sans-Pro";
-    src: url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+    src: url("../../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
 }
 
 $background: #0e1122;
@@ -39,15 +39,32 @@ body {
 
 .main-content .title-container {
     flex: 0 1 100px;
-    width: 100%;
-    @include flex(center, center);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 
 .title-container .title {
     @include source-sans();
+    grid-column-start: 3;
     font-size: 3.5em;
-    color: $default-text;
     font-weight: 900;
+    color: $default-text;
+}
+
+.title-container .about {
+    @include source-sans();
+    grid-column-start: 5;
+    font-size: 1.25em;
+    font-weight: 700;
+    color: $default-text;
+    opacity: 60%;
+    text-decoration: none;
+
+    &:hover {
+        opacity: 100%;
+    }
 }
 
 .main-content .link-input-container {
@@ -107,14 +124,37 @@ body {
 }
 
 .player-container .queue-container {
+    height: 100%;
     flex-grow: 1;
     @include flex(center, center);
 }
 
 .queue-container .queue {
     width: 80%;
-    height: 93%;
+    height: 500px;
     background: $dark-bg;
     border: 1px solid $default-text;
     border-radius: 8px;
+    padding: 10px;
+    overflow: auto;
+    display: grid;
+    place-items: center;
+}
+
+.queue-container .queue::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+.queue-container .queue::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: $default-text;
+}
+
+.queue-content {
+    width: 93%;
+    height: 150px;
+    background: green;
+    @include flex(center, center);
+    margin-bottom: 5px;
 }
