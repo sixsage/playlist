@@ -1,6 +1,120 @@
+@font-face {
+    font-family: "Source-Sans-Pro";
+    src: url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+}
+
+$background: #0e1122;
+$dark-bg: #161a2b;
+
+$default-text: #dfe6f5;
+
+@mixin source-sans() {
+    font-family: "Source-Sans-Pro", sans-serif;
+}
+
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+
 html,
 body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background: $background;
+    font-size: 16px;
+}
+
+.main-content {
+    display: flex;
+    flex-flow: column;
+    width: 100vw;
+    height: 100vh;
+}
+
+.main-content .title-container {
+    flex: 0 1 100px;
+    width: 100%;
+    @include flex(center, center);
+}
+
+.title-container .title {
+    @include source-sans();
+    font-size: 3.5em;
+    color: $default-text;
+    font-weight: 900;
+}
+
+.main-content .link-input-container {
+    flex: 0 1 100px;
+    width: 100%;
+    @include flex(center, center);
+}
+
+.link-input-container .link-input {
+    @include source-sans();
+    height: 50%;
+    width: 45%;
+    font-size: 1.25em;
+    border: 1px solid $default-text;
+    background: $dark-bg;
+    border-radius: 8px;
+    color: $default-text;
+    outline: none;
+}
+
+.link-input-container .link-input::placeholder {
+    color: $default-text;
+}
+
+.main-content .player-container {
+    flex: 1 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    align-items: stretch;
+}
+
+.player-container .video-container {
+    flex-grow: 2;
+    @include flex(center, center);
+}
+
+.video-container .aspect-ratio-container {
+    width: 80%;
+    height: 93%;
+    @include flex(center, center);
+}
+
+.aspect-ratio-container .aspect-ratio {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background: $dark-bg;
+}
+
+.aspect-ratio .video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.player-container .queue-container {
+    flex-grow: 1;
+    @include flex(center, center);
+}
+
+.queue-container .queue {
+    width: 80%;
+    height: 93%;
+    background: $dark-bg;
+    border: 1px solid $default-text;
+    border-radius: 8px;
 }
