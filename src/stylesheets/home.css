@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Source-Sans-Pro";
-  src: url("../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+  src: url("../../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
 }
 
 html,
@@ -32,13 +32,11 @@ body {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 100px;
           flex: 0 1 100px;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -46,9 +44,26 @@ body {
 
 .title-container .title {
   font-family: "Source-Sans-Pro", sans-serif;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
   font-size: 3.5em;
-  color: #dfe6f5;
   font-weight: 900;
+  color: #dfe6f5;
+}
+
+.title-container .about {
+  font-family: "Source-Sans-Pro", sans-serif;
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #dfe6f5;
+  opacity: 60%;
+  text-decoration: none;
+}
+
+.title-container .about:hover {
+  opacity: 100%;
 }
 
 .main-content .link-input-container {
@@ -158,6 +173,7 @@ body {
 }
 
 .player-container .queue-container {
+  height: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -174,9 +190,40 @@ body {
 
 .queue-container .queue {
   width: 80%;
-  height: 93%;
+  height: 500px;
   background: #161a2b;
   border: 1px solid #dfe6f5;
   border-radius: 8px;
+  padding: 10px;
+  overflow: auto;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.queue-container .queue::-webkit-scrollbar {
+  width: 6px;
+  background: transparent;
+}
+
+.queue-container .queue::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: #dfe6f5;
+}
+
+.queue-content {
+  width: 93%;
+  height: 150px;
+  background: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5px;
 }
 /*# sourceMappingURL=home.css.map */
