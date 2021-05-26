@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Source-Sans-Pro";
+  src: url("../../../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+}
+
+$background: #0e1122;
+$dark-bg: #161a2b;
+
+$default-text: #dfe6f5;
+
+@mixin source-sans() {
+  font-family: "Source-Sans-Pro", sans-serif;
+}
+
+@mixin flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background;
+  font-size: 16px;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.title-container {
+  flex: 0 1 100px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.title-container .title {
+  @include source-sans();
+  grid-column-start: 3;
+  font-size: 3.5em;
+  font-weight: 900;
+  color: $default-text;
+  text-decoration: none;
+}
+
+.title-container .about {
+  @include source-sans();
+  grid-column-start: 5;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: $default-text;
+  opacity: 60%;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+.spacer {
+  flex: 0 0 5%;
+}
+
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+
+  & > div {
+    padding: 12px;
+  }
+}
+
+.heading {
+  @include source-sans();
+  font-size: 1.25em;
+  font-weight: bold;
+  color: $default-text;
+}
+
+.paragraph {
+  @include source-sans();
+  font-size: 1em;
+  font-weight: normal;
+  color: $default-text;
+}
+
+.introduction-container {
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+.who-container {
+  grid-row-start: 2;
+  grid-column-start: 2;
+}

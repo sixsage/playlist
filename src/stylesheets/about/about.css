@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Source-Sans-Pro";
+  src: url("../../../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #0e1122;
+  font-size: 16px;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.title-container {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100px;
+          flex: 0 1 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[5];
+      grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.title-container .title {
+  font-family: "Source-Sans-Pro", sans-serif;
+  -ms-grid-column: 3;
+      grid-column-start: 3;
+  font-size: 3.5em;
+  font-weight: 900;
+  color: #dfe6f5;
+  text-decoration: none;
+}
+
+.title-container .about {
+  font-family: "Source-Sans-Pro", sans-serif;
+  -ms-grid-column: 5;
+      grid-column-start: 5;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #dfe6f5;
+  opacity: 60%;
+  text-decoration: none;
+}
+
+.title-container .about:hover {
+  opacity: 100%;
+}
+
+.spacer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 5%;
+          flex: 0 0 5%;
+}
+
+.about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+}
+
+.about-container > div {
+  padding: 12px;
+}
+
+.heading {
+  font-family: "Source-Sans-Pro", sans-serif;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: #dfe6f5;
+}
+
+.paragraph {
+  font-family: "Source-Sans-Pro", sans-serif;
+  font-size: 1em;
+  font-weight: normal;
+  color: #dfe6f5;
+}
+
+.introduction-container {
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+
+.who-container {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+}
+/*# sourceMappingURL=about.css.map */

@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Source-Sans-Pro";
-  src: url("../../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
+  src: url("../../../fonts/source-sans-pro/SourceSansPro-Regular.ttf");
 }
 
 html,
@@ -49,6 +49,7 @@ body {
   font-size: 3.5em;
   font-weight: 900;
   color: #dfe6f5;
+  text-decoration: none;
 }
 
 .title-container .about {
